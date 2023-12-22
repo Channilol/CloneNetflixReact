@@ -1,6 +1,12 @@
 import React from "react";
 import './FilmCategory.css'
 
+/* fetch("https://striveschool-api.herokuapp.com/api/put-your-endpoint-here/", {
+headers: {
+"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0NDZkYjJjNmEwZDAwMTg0OTU5YjUiLCJpYXQiOjE3MDMyMzQ3NzksImV4cCI6MTcwNDQ0NDM3OX0.bermSJ88eRlwzJCYgr8C2MF0aj8KGQGRzTYLDXJLSRI"
+}
+}) */
+
 class FilmCategory extends React.Component {
     constructor(props) {
         super(props)
