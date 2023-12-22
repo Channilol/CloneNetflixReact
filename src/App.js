@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import MyHeader from './components/MyHeader/MyHeader';
+import BackgroundFilm from './components/BackgroundFilm/BackgroundFilm';
+import FilmCarousel from './components/FilmCarousel/FilmCarousel';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+        <BackgroundFilm />
+        <MyHeader />
+        <FilmCarousel searchQuery='shark' crslTitle='Shark Films'/>
+        <FilmCarousel searchQuery='nature' crslTitle='Nature Films'/>
+        <FilmCarousel searchQuery='war' crslTitle='War Films'/>
+        <FilmCarousel searchQuery='star' crslTitle='Star Films'/>
+        <FilmCarousel searchQuery='space' crslTitle='Space Films'/>
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.filmCategories {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    color: white;
+    background-color: rgba(0,0,0,0.95);
+    text-align: center;
+}
+
+.filmCategories.hidden {
+    display: none;
+}
+
+.filmCategories ul {
+    height: 85%;
+    overflow-y: scroll;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.filmCategories li {
+    margin: 20px 0;
+}
+
+.filmCategories button {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    font-size: 1.3em;
+    border-radius: 50%;
+    padding: 0 0 5px 2px;
+    transition: transform 0.2s ease;
+}
+
+.filmCategories button:hover {
+    transform: scale(1.1);
+}

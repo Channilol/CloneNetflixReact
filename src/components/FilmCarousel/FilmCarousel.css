@@ -1,0 +1,51 @@
+.carouselContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cardsCarousel {
+    display: flex;
+    margin: 0 auto;
+    width: 92%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.btnLeft {
+    opacity: 0.8;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 1.5%;
+    height: 100%;
+    width: 50px;
+    background-color: rgba(0,0,0,0.9);
+    border: none;
+    border-radius: 3px;
+    transition: opacity 0.15s ease
+}
+
+.btnLeft:hover {
+    opacity: 1;
+}
+
+.btnRight {
+    opacity: 0.9;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 1.5%;
+    height: 100%;
+    width: 50px;
+    background-color: rgba(0,0,0,0.9);
+    border: none;
+    border-radius: 3px;
+    transition: opacity 0.15s ease
+}
+
+h2 {
+    margin: 40px 0 5px 2.5%;
+    color: white;
+    font-weight: 500;
+}
