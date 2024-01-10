@@ -19,7 +19,7 @@ class FilmDetails extends React.Component {
         try {
             const res = await fetch('https://striveschool-api.herokuapp.com/api/comments/', {
                 headers: {
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0NDZkYjJjNmEwZDAwMTg0OTU5YjUiLCJpYXQiOjE3MDMyMzQ3NzksImV4cCI6MTcwNDQ0NDM3OX0.bermSJ88eRlwzJCYgr8C2MF0aj8KGQGRzTYLDXJLSRI"
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTliZjZhZGUwZGQxZDAwMTgyZDE3MWMiLCJpYXQiOjE3MDQ3MjAwNDUsImV4cCI6MTcwNTkyOTY0NX0.DniBO2PlsIOn1pa4wAkZ_7XYJiCFgkID4BD2VGlZNgY"
                     }
                 })
             if (res.ok) {
@@ -57,7 +57,7 @@ class FilmDetails extends React.Component {
                 body: JSON.stringify(this.state.newComment),
                 headers: {
                     Authorization:
-                        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0MmJkMWI1MjViYjAwMThlZDA3YjAiLCJpYXQiOjE3MDMxNjA3ODUsImV4cCI6MTcwNDM3MDM4NX0.hPuw6zmzOPFeijuIZWkvyt-vMT8yAYe4u1mSHcgb0Qo",
+                        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTliZjZhZGUwZGQxZDAwMTgyZDE3MWMiLCJpYXQiOjE3MDQ3MjAwNDUsImV4cCI6MTcwNTkyOTY0NX0.DniBO2PlsIOn1pa4wAkZ_7XYJiCFgkID4BD2VGlZNgY",
                     "Content-Type": "application/json",
                 },
             });
@@ -108,7 +108,7 @@ class FilmDetails extends React.Component {
                             <h2>Commenti:</h2>
                             {this.state.comments.map((comment) => {
                                 return (
-                                <li key={comment._id}>{comment.comment}<span className="commentRate">{comment.rate}</span></li>
+                                <li key={comment._id}>{comment.comment}<span className="commentRate">{comment.rate === 1 ? '⭐' : (comment.rate === 2 ? '⭐⭐' : (comment.rate === 3 ? '⭐⭐⭐' : (comment.rate === 4 ? '⭐⭐⭐⭐' : (comment.rate === 5 ? '⭐⭐⭐⭐⭐' : ''))))}</span></li>
                                 )
                             })}
                         </ul>

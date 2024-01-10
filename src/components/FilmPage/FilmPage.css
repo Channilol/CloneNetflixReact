@@ -1,0 +1,18 @@
+.filmPageDetails {
+    display: flex;
+    color: white;
+}
+
+.filmDetLeft {
+    width: 60%;
+    margin: 0 100px;
+}
+
+.filmPageDetails h1 {
+    margin: 100px 0 20px 0;
+}
+
+.filmPageDetails p {
+    margin: 10px 0 0 0;
+    max-width: 500px;
+}

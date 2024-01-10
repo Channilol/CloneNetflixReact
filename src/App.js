@@ -1,32 +1,25 @@
 import './App.css';
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home/Home';
+import MyTvShows from './components/MyTvShows/MyTvShows';
+import FilmPage from './components/FilmPage/FIlmPage';
 import MyHeader from './components/MyHeader/MyHeader';
-import BackgroundFilm from './components/BackgroundFilm/BackgroundFilm';
-import FilmCarousel from './components/FilmCarousel/FilmCarousel';
 import MyFooter from './components/MyFooter/MyFooter';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isLoading: true,
-    }
-  }
-
-  render () {
+const App = () => {
     return (
-      <div className='App'>
-          <BackgroundFilm />
-          <MyHeader />
-          <FilmCarousel searchQuery='shark' crslTitle='Shark Films'/>
-          <FilmCarousel searchQuery='nature' crslTitle='Nature Films'/>
-          <FilmCarousel searchQuery='war' crslTitle='War Films'/>
-          <FilmCarousel searchQuery='star' crslTitle='Star Films'/>
-          <FilmCarousel searchQuery='space' crslTitle='Space Films'/>
-          <MyFooter />
-      </div>
+      <BrowserRouter>
+        <div className='App'>
+            <MyHeader />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/tvshows' element={<MyTvShows />} />
+              <Route path='/tvshows/:id' element={<FilmPage />} />
+            </Routes>
+            <MyFooter />
+        </div>
+      </BrowserRouter>
     );
-  }
 }
 
 export default App;
